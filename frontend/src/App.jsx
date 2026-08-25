@@ -61,9 +61,11 @@ const sensitivityColor = {
   critical: "bg-red-100 text-red-800",
 };
 
+const API_BASE = import.meta.env.VITE_API_URL || "";
+
 export default function App() {
   const { data: users, loading: usersLoading, error: usersError } = useApi(
-    "/api/users",
+    `${API_BASE}/api/users`,
     []
   );
   const [selectedUser, setSelectedUser] = useState(null);
@@ -73,8 +75,8 @@ export default function App() {
     loading: directLoading,
     error: directError,
   } = useApi(
-    selectedUser ? `/api/users/${selectedUser}/direct-access` : null,
-    [selectedUser]
+  selectedUser ? `${API_BASE}/api/users/${selectedUser}/direct-access` : null,
+  [selectedUser]
   );
 
   const {
@@ -82,9 +84,9 @@ export default function App() {
     loading: pathsLoading,
     error: pathsError,
   } = useApi(
-    selectedUser ? `/api/users/${selectedUser}/attack-paths` : null,
-    [selectedUser]
-  );
+  selectedUser ? `${API_BASE}/api/users/${selectedUser}/attack-paths` : null,
+  [selectedUser]
+ );
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
