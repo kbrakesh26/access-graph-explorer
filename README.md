@@ -66,9 +66,10 @@ npm run dev              # starts UI on http://localhost:5173
 
 ## Screenshots
 
- ![Screenshot](docs/screenshot (594).png)
+ ![Screenshot](docs/screenshot(597).png)
 
 ## Demo
 
-https://access-graph-explorer.vercel.app/
+#Live : https://access-graph-explorer.vercel.app/
+
 https://access-graph-explorer.onrender.com
