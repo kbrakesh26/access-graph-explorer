@@ -66,7 +66,7 @@ npm run dev              # starts UI on http://localhost:5173
 
 ## Screenshots
 
-<!-- TODO: add screenshots of the UI here -->
+ ![Screenshot](docs/screenshot(594).png)
 
 ## Demo
 
